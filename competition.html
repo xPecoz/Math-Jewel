@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدرسة عبدالله النديم | المسابقات</title>
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="shortcut icon" href="imgs/logo-2.webp" />
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body class="dark-theme">
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="imgs/logo-2.webp" />
+          </span>
+          <div class="text header-text">
+            <span class="name">جوهرة الرياضيات</span>
+          </div>
+        </div>
+        <i class="uil uil-angle-right-b toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html">
+                <i class="uil uil-window icon"></i>
+                <span class="text nav-text">الصفحة الرئيسية</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="exam.html">
+                <i class="uil uil-arrow-growth icon"></i>
+                <span class="text nav-text">نتيجية الإمتحانات</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="papers.html">
+                <i class="uil uil-file-info-alt icon"></i>
+                <span class="text nav-text">الإشتراك في المنصة</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="feedback.html">
+                <i class="uil uil-envelope-question icon"></i>
+                <span class="text nav-text">الأراء</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="books.html">
+                <i class="uil uil-book-open icon"></i>
+                <span class="text nav-text">الصف الدراسي</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="tabel.html">
+                <i class="fa-solid fa-table-columns icon"></i>
+                <span class="text nav-text">جدول دروس الأون لاين</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="tabel_exam.html">
+                <i class="uil uil-clipboard icon"></i>
+                <span class="text nav-text">جدول الإمتحانات</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a class="active" href="competition.html">
+                <i class="fa-solid fa-users icon"></i>
+                <span class="text nav-text">الاشتراك في المسابقات</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="content w-full">
+      <!-- Start Head -->
+      <div class="head">
+        <i class="uil uil-moon"></i>
+        <div class="text">اضغط علي السهم لإظهار الخدمات</div>
+      </div>
+      <!-- End Head -->
+      <!-- Start Main Page -->
+      <div class="main-page">
+        <div class="container feed-container">
+          <h1 class="h1-competition">الإشتراك في المسابقات</h1>
+          <p class="dec">هنا بإمكانك الإشتراك في مسابقات المدرسة</p>
+          <div class="feedback">
+            <h3>إرسال طلب الإشتراك</h3>
+            <input
+              class="name-2"
+              id="fullName"
+              placeholder="الإسم"
+              type="text"
+            />
+            <input class="name-2" placeholder="الكود" type="number" />
+            <select id="class" class="class_2">
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+              <option>الصف</option>
+            </select>
+            <input
+              style="display: none"
+              type="text"
+              id="write_comp"
+              placeholder="اكتب الموهبة"
+            />
+            <button onclick="SendMail()" class="title" id="title" type="submit">
+              الإرسال
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="modal">
+            <div class="close-btn">
+              <div class="bars bar1"></div>
+              <div class="bars bar2"></div>
+            </div>
+            <div class="modal-body">
+              <i class="uil uil-grin"></i>
+              <h2>تم الإرسال</h2>
+              <p>الإقتراح أو الشكوى أرسل بنجاح</p>
+              <button
+                type="button"
+                style="border: none; margin-top: 70px"
+                class="btn-shape my-a title title-3"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                التأكيد
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Main Page -->
+    </div>
+    <a href="#" class="up">Up</a>
+    <script
+      src="https://kit.fontawesome.com/102e410967.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("C2IeN5h_sjANwPBLy");
+      })();
+    </script> -->
+    <script src="js/competition.js"></script>
+  </body>
+</html>
