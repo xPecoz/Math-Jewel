@@ -1,4 +1,4 @@
-fetch("../js/json.json")
+fetch("js/json.json")
   .then((res) => res.json())
   .then((res) => (password = res));
 
