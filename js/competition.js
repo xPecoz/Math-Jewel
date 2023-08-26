@@ -43,27 +43,20 @@ btnDark.addEventListener("click", () => {
 
 function SendMail() {
   let msgSend = document.querySelector(".modal");
-  let submit = document.querySelector(".title-3");
-  let closeBtn = document.querySelector(".close-btn");
+  // let submit = document.querySelector(".title-3");
+  // let closeBtn = document.querySelector(".close-btn");
 
   let params = {
     from_name: document.getElementById("fullName").value,
-    class: document.getElementById("class").value,
+    class: 0,
+    competition: 0,
   };
 
-  if (
-    params.from_name &&
-    params.class &&
-    params.competition !== "دينى" &&
-    params.competition !== "رياضي" &&
-    params.competition
-  ) {
-    emailjs.send("service_dkbeiop", "template_v97w75m", params);
-    msgSend.classList.add("active-5");
-  }
+  emailjs.send("service_dkbeiop", "template_v97w75m", params);
+  // msgSend.classList.add("active-5");
 
-  closeBtn.addEventListener("click", close);
-  submit.addEventListener("click", close);
+  // closeBtn.addEventListener("click", close);
+  // submit.addEventListener("click", close);
 
   const close = () => msgSend.classList.remove("active-5");
 }
