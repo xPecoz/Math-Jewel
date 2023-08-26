@@ -1,7 +1,7 @@
 /* Start Global Rules */
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800&display=swap");
 :root {
-  --purple-color: #3f51b5;
+  --purple-color: #6b00e3;
   --grey-color: #707070;
   --body-color: #f1f5f9;
   --box-color: white;
@@ -30,13 +30,13 @@ body {
 }
 body.dark-theme {
   --grey-color: #bcbac4;
-  --body-color: #131417;
-  --box-color: #1e1f26;
+  --body-color: #121128;
+  --box-color: #211c3dd9;
   --white-color: black;
   --black-color: white;
   --icon-color: #939393;
   --shadow-color: rgb(0 0 0 / 50%);
-  --purple-alt-color: #3f51b5;
+  --purple-alt-color: #6b00e3;
   --title-color: white;
   --exam-color: rgba(255, 255, 255, 0.07);
   --exam-alt-color: var(--purple-color);
@@ -666,7 +666,7 @@ li {
 }
 .main-page .box .emty p {
   color: var(--black-color);
-  background-color: var(--purple-alt-color);
+  background-color: var(--body-color);
   padding: 10px;
   margin: 10px auto 20px;
   width: calc(100% - 30px);
