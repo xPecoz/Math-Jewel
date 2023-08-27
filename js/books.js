@@ -1,12 +1,6 @@
 // Scrool To Top
 let btnScrol = document.querySelector(".up");
 
-btnScrol.onclick = function () {
-  window.scrollTo({
-    top: 0,
-  });
-};
-
 window.addEventListener("scroll", () => {
   this.scrollY >= 600
     ? btnScrol.classList.add("show")
@@ -21,9 +15,9 @@ let btnSid = document.querySelector(".toggle");
 btnSid.onclick = function () {
   sidebar.classList.toggle("close");
   content.classList.toggle("ml-250");
-  document.querySelectorAll(".sidebar li .icon").forEach((ele) => {
-    ele.classList.toggle("w-44");
-  });
+  document
+    .querySelectorAll(".sidebar li .icon")
+    .forEach((ele) => ele.classList.toggle("w-44"));
 };
 
 // Light Mode
@@ -45,30 +39,12 @@ btnDark.addEventListener("click", () => {
     : localStorage.removeItem("dark");
 });
 
-// Random Border Color
-let character = ["A", "B", "C", "D", "E", "F", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let mainH2 = document.querySelectorAll(".main-page h2");
-
-setInterval(() => {
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += character[Math.floor(Math.random() * character.length)];
-  }
-  mainH2.forEach((ele) => {
-    ele.style.borderColor = `${color} transparent`;
-  });
-}, 1000);
-
-window.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-});
+window.addEventListener("contextmenu", (e) => e.preventDefault());
 
 document.onkeydown = (e) => {
   let num = 0;
   let ctrl;
-  e.ctrlKey !== false ? (ctrl = true) : "";
-  e.keyCode == 85 ? (num = 85) : "";
-  if (num == 85 && ctrl == true) {
-    e.preventDefault();
-  }
+  if (e.ctrlKey !== false) ctrl = true;
+  if (e.keyCode == 85) num = 85;
+  if (num == 85 && ctrl == true) e.preventDefault();
 };

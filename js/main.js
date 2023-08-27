@@ -40,16 +40,6 @@ btnDark.addEventListener("click", () => {
 });
 
 // Random Border Color
-let character = ["A", "B", "C", "D", "E", "F", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let mainH2 = document.querySelectorAll(".main-page h2");
-
-setInterval(() => {
-  let color = "#";
-  for (let i = 0; i < 6; i++)
-    color += character[Math.floor(Math.random() * character.length)];
-
-  mainH2.forEach((ele) => (ele.style.borderColor = `${color} transparent`));
-}, 1000);
 
 // CounDown
 // let countDownDate4 = new Date("March 5, 2023").getTime();
@@ -111,7 +101,7 @@ window.addEventListener("contextmenu", (e) => e.preventDefault());
 document.onkeydown = (e) => {
   let num = 0,
     ctrl;
-  e.ctrlKey !== false ? (ctrl = true) : "";
-  e.keyCode == 85 ? (num = 85) : "";
+  if (e.ctrlKey !== false) ctrl = true;
+  if (e.keyCode == 85) num = 85;
   if (num == 85 && ctrl == true) e.preventDefault();
 };

@@ -1,4 +1,4 @@
-//  Scrool To Topebar
+// Scrool To Topebar
 let btnScrol = document.querySelector(".up");
 
 window.addEventListener("scroll", () => {
@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
     : btnScrol.classList.remove("show");
 });
 
-//  Open And Close Sidebar
+// Open And Close Sidebar
 let sidebar = document.querySelector(".sidebar");
 let content = document.querySelector(".content");
 let btnSid = document.querySelector(".toggle");
@@ -20,7 +20,7 @@ btnSid.onclick = function () {
     .forEach((e) => e.classList.toggle("w-44"));
 };
 
-//  Light Mode
+// Light Mode
 let btnDark = document.querySelector(".head i");
 
 if (localStorage.getItem("dark")) {
@@ -38,18 +38,6 @@ btnDark.addEventListener("click", () => {
     ? localStorage.setItem("dark", true)
     : localStorage.removeItem("dark");
 });
-
-//  Random Border Color
-let character = ["A", "B", "C", "D", "E", "F", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let mainH2 = document.querySelectorAll(".main-page h2");
-
-setInterval(() => {
-  let color = "#";
-  for (let i = 0; i < 6; i++)
-    color += character[Math.floor(Math.random() * character.length)];
-
-  mainH2.forEach((ele) => (ele.style.borderColor = `${color} transparent`));
-}, 1000);
 
 // Open Select
 

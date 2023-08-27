@@ -32,6 +32,18 @@ const fourExam = [
     href: "https://drive.google.com/file/d/1F2o8AfKpOLE-8p3U-SQBiw_SyzyvRYPN/view?usp=sharing",
   },
 ];
+const fourExam_month = [
+  {
+    name: "اغسطس",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
+const fourExam_final = [
+  {
+    name: "الإختبار الأول",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
 const fourExamDrive = [
   {
     name: "A1",
@@ -42,8 +54,24 @@ const fourExamDrive = [
     href: "https://docs.google.com/forms/d/1zAeEKmw_dDAZ85-E3d_T3vYfPj2l27eZisdrljmpA9E/viewform?edit_requested=true",
   },
 ];
+const fourExamDrive_final = [
+  {
+    name: "الإختبار الأول",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
+const fourExamDrive_month = [
+  {
+    name: "اغسطس",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
 
-if (location.search) {
+if (
+  location.search &&
+  location.search !== "?exam" &&
+  location.search !== "?examDrive"
+) {
   document
     .querySelectorAll(".head, .main-page, .main-page .container")
     .forEach((e) => e.classList.add("blur"));
@@ -103,7 +131,87 @@ if (location.search == "?train") {
       <p class="dec">إختبارات الصف الرابع</p>
       <h2>جميع إختبارات الصف الرابع</h2>
       <div class="boxs" style="display: grid">
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الدروس</div>
+            <a href="?exam&lesson" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الشهور</div>
+            <a href="?exam&month" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات نهائية</div>
+            <a href="?exam&final" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+      </div>
+    `;
+} else if (location.search == "?exam&lesson") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
         ${fourExam.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?exam&month") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fourExam_month.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?exam&final") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fourExam_final.map((e) => {
           return `
             <div class="box classBox">
               <div class="emty" style="padding: 10px">
@@ -126,11 +234,91 @@ if (location.search == "?train") {
   );
 } else if (location.search == "?examDrive") {
   document.querySelector(".main-page .container").innerHTML = `
-      <h1 class="h1-book">إختبارات إلكترونية للرابع</h1>
-      <p class="dec">إختبارات إلكترونية الصف الرابع</p>
-      <h2>جميع الإختبارات الإلكترونبة</h2>
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الدروس</div>
+            <a href="?exam&lesson" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الشهور</div>
+            <a href="?exam&month" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات نهائية</div>
+            <a href="?exam&final" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+      </div>
+    `;
+} else if (location.search == "?examDrive&lesson") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
       <div class="boxs" style="display: grid">
         ${fourExamDrive.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?examDrive&month") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fourExamDrive_month.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?examDrive&final") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fourExam_final.map((e) => {
           return `
             <div class="box classBox">
               <div class="emty" style="padding: 10px">

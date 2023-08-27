@@ -39,18 +39,6 @@ btnDark.addEventListener("click", () => {
     : localStorage.removeItem("dark");
 });
 
-// Random Border Color
-let character = ["A", "B", "C", "D", "E", "F", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let mainH2 = document.querySelectorAll(".main-page h2");
-
-setInterval(() => {
-  let color = "#";
-  for (let i = 0; i < 6; i++)
-    color += character[Math.floor(Math.random() * character.length)];
-
-  mainH2.forEach((e) => (e.style.borderColor = `${color} transparent`));
-}, 1000);
-
 // Send Email
 function SendMail() {
   let msgSend = document.querySelector(".modal");

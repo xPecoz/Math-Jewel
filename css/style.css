@@ -31,7 +31,7 @@ body {
 body.dark-theme {
   --grey-color: #bcbac4;
   --body-color: #121128;
-  --box-color: #211c3dd9;
+  --box-color: #211c3d;
   --white-color: black;
   --black-color: white;
   --icon-color: #939393;
@@ -313,7 +313,8 @@ li {
   align-items: center;
   border-radius: 6px;
   transition: 0.4s;
-  border: 1px solid var(--grey-color);
+  border-bottom: 1px solid var(--grey-color);
+  border-top: 1px solid var(--grey-color);
 }
 .sidebar li a.active {
   background-color: var(--purple-color);
@@ -351,83 +352,6 @@ li {
 .menu-bar .mode i {
   position: absolute;
 }
-/* .change {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: var(--box-color);
-  margin-top: 20px;
-  border-radius: 6px;
-  gap: 15px;
-  padding: 7px;
-}
-.change p {
-  color: var(--black-color);
-  font-size: 23px;
-  margin: 18px;
-  font-weight: bold;
-}
-@media (max-width: 618px) {
-  .change p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 485px) {
-  .change p {
-    font-size: 13px;
-    text-align: center;
-    line-height: 1.5;
-  }
-}
-.change input {
-  display: block;
-  height: 50px;
-  background-color: var(--exam-color);
-  border-radius: 6px;
-  padding: 0 10px;
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  width: 320px;
-  color: var(--black-color);
-}
-@media (max-width: 443px) {
-  .change input {
-    width: -webkit-fill-available;
-  }
-}
-.change input::placeholder {
-  color: var(--black-color);
-}
-.change input:focus {
-  outline: none;
-}
-.change button {
-  padding: 5px 0;
-  border-radius: 6px;
-  background-color: var(--purple-color);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  font-family: "Cairo", sans-serif;
-  width: 170px;
-}
-.change div {
-  font-weight: bold;
-  padding: 7px 0;
-  background-color: var(--purple-color);
-  color: white;
-  font-size: 20px;
-  width: 100px;
-  text-align: center;
-  border-radius: 6px;
-  margin-top: 25px;
-} */
 .sidebar.close {
   width: 80px;
 }
@@ -1547,6 +1471,8 @@ select {
   border-radius: 8px;
   padding: 10px 20px;
   margin: 5px 0;
+  border: 0;
+  outline: none !important;
 }
 .h1-learn {
   animation: control-width-8 5s 1s steps(15) infinite both,

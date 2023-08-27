@@ -37,7 +37,7 @@
           <ul class="menu-links">
             <li class="nav-link">
               <a href="../index.html">
-                <i class="uil uil-window icon"></i>
+                <i class="uil uil-estate icon"></i>
                 <span class="text nav-text">الصفحة الرئيسية</span>
               </a>
             </li>
@@ -101,9 +101,9 @@
           <h1 class="h1-exam">نتيجية الإمتحانات</h1>
           <p class="dec">هنا بإمكانك الحصول علي النتيجة</p>
           <div class="exam-form">
-            <input type="number" placeholder="اكتب الكود" />
+            <input type="number" id="code" placeholder="اكتب الكود" />
             <div class="class time">120</div>
-            <button>اظهار النتيجية</button>
+            <button id="showResult">اظهار النتيجية</button>
           </div>
           <div class="exam-form" style="margin-top: 15px; padding: 5px">
             <p
@@ -123,11 +123,11 @@
           </div>
           <div class="exam-2">
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="week1"></p>
               <p class="name">الإختبار الأول</p>
             </div>
             <div class="studies">
-              <p class="deg"></p>
+              <p class="deg" id="week2"></p>
               <p class="name">الإختبار الثاني</p>
             </div>
           </div>
@@ -141,5 +141,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/exam.js"></script>
+    <script type="module" src="/exams/js/results.js"></script>
+    <script type="module" src="/exams/js/paper.js"></script>
   </body>
 </html>

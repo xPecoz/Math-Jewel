@@ -37,7 +37,7 @@
           <ul class="menu-links">
             <li class="nav-link">
               <a href="../index.html">
-                <i class="uil uil-window icon"></i>
+                <i class="uil uil-estate icon"></i>
                 <span class="text nav-text">الصفحة الرئيسية</span>
               </a>
             </li>
@@ -101,49 +101,49 @@
           <h1 class="h1-exam">نتيجية الإمتحانات</h1>
           <p class="dec">هنا بإمكانك الحصول علي النتيجة من دون أي جهد</p>
           <div class="exam-form">
-            <input type="number" placeholder="اكتب الكود" />
+            <input type="number" id="code" placeholder="اكتب الكود" />
             <div class="class time">120</div>
-            <button>اظهار النتيجية</button>
+            <button id="showResult">اظهار النتيجية</button>
           </div>
           <div class="exam-2">
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="one"></p>
               <p class="name">الإختبار الأول</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="two"></p>
               <p class="name">الإختبار الثاني</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="there"></p>
               <p class="name">الإختبار الثالث</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="four"></p>
               <p class="name">الإختبار الرابع</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="five"></p>
               <p class="name">الإختبار الخامس</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="six"></p>
               <p class="name">الإختبار السادس</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="sever"></p>
               <p class="name">الإختبار السابع</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="eigth"></p>
               <p class="name">الإختبار الثامن</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="nine"></p>
               <p class="name">الإختبار التاسع</p>
             </div>
             <div class="arabic">
-              <p class="deg"></p>
+              <p class="deg" id="ten"></p>
               <p class="name">الإختبار العاشر</p>
             </div>
           </div>
@@ -157,5 +157,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/exam.js"></script>
+    <script type="module" src="/exams/js/results.js"></script>
+    <script type="module" src="/exams/js/final.js"></script>
   </body>
 </html>

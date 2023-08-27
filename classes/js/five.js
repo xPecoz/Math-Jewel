@@ -32,6 +32,18 @@ const fiveExam = [
     href: "https://drive.google.com/file/d/15A_rwaF92uqQuYqap7nUbPlaVUrbUM47/view?usp=sharing",
   },
 ];
+const fiveExam_month = [
+  {
+    name: "أغسطس",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
+const fiveExam_final = [
+  {
+    name: "الإختبار الثاني",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
 const fiveExamDrive = [
   {
     name: "B1",
@@ -42,8 +54,24 @@ const fiveExamDrive = [
     href: "https://docs.google.com/forms/d/1HYmkTFvXTXvf5g4jKoyxfcNBwK2Tp7FvJh4LqLzAhIk/viewform?edit_requested=true",
   },
 ];
+const fiveExamDrive_final = [
+  {
+    name: "الإختبار الثاني",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
+const fiveExamDrive_month = [
+  {
+    name: "ديسمبر",
+    href: "https://drive.google.com/file/d/1oe5DF1MDVfPWITQ-YsbyUptqT55MCXnj/view?usp=sharing",
+  },
+];
 
-if (location.search) {
+if (
+  location.search &&
+  location.search !== "?exam" &&
+  location.search !== "?examDrive"
+) {
   document
     .querySelectorAll(".head, .main-page, .main-page .container")
     .forEach((e) => e.classList.add("blur"));
@@ -70,16 +98,17 @@ if (location.search) {
     }
   };
 }
+
 if (location.search == "?train") {
   document.querySelector(".main-page .container").innerHTML = `
-      <h1 class="h1-book">تمارين الخامس</h1>
-      <p class="dec">تمارين الصف الخامس</p>
+      <h1 class="h1-book">تمارين الرابع</h1>
+      <p class="dec">تمارين الصف الرابع</p>
       <h2>جميع الدروس و التمارين</h2>
       <div class="boxs" style="display: grid">
         ${fiveTrain.map((e) => {
           return `
             <div class="box classBox">
-              <div class="emty">
+              <div class="emty" style="padding: 10px">
                 <div class="text">${e.name}</div>
                 <a
                   target="_blank"
@@ -99,14 +128,94 @@ if (location.search == "?train") {
   );
 } else if (location.search == "?exam") {
   document.querySelector(".main-page .container").innerHTML = `
-      <h1 class="h1-book">أختبارات الخامس</h1>
-      <p class="dec">إختبارات الصف الخامس</p>
-      <h2>جميع إختبارات الصف الخامس</h2>
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الدروس</div>
+            <a href="?exam&lesson" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الشهور</div>
+            <a href="?exam&month" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات نهائية</div>
+            <a href="?exam&final" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+      </div>
+    `;
+} else if (location.search == "?exam&lesson") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
       <div class="boxs" style="display: grid">
         ${fiveExam.map((e) => {
           return `
             <div class="box classBox">
-              <div class="emty">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?exam&month") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fiveExam_month.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?exam&final") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fiveExam_final.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
                 <div class="text">${e.name}</div>
                 <a
                   target="_blank"
@@ -126,14 +235,94 @@ if (location.search == "?train") {
   );
 } else if (location.search == "?examDrive") {
   document.querySelector(".main-page .container").innerHTML = `
-      <h1 class="h1-book">إختبارات إلكترونية للخامس</h1>
-      <p class="dec">إختبارات إلكترونية الصف الخامس</p>
-      <h2>جميع الإختبارات الإلكترونبة</h2>
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الدروس</div>
+            <a href="?exam&lesson" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات الشهور</div>
+            <a href="?exam&month" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+        <div class="box classBox">
+          <div class="emty" style="padding: 10px">
+            <div class="text">إختبارات نهائية</div>
+            <a href="?exam&final" class="coolBeans">الذهاب</a>
+          </div>
+        </div>
+      </div>
+    `;
+} else if (location.search == "?examDrive&lesson") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
       <div class="boxs" style="display: grid">
         ${fiveExamDrive.map((e) => {
           return `
             <div class="box classBox">
-              <div class="emty">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?examDrive&month") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fiveExamDrive_month.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?examDrive&final") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">أختبارات الرابع</h1>
+      <p class="dec">إختبارات الصف الرابع</p>
+      <h2>جميع إختبارات الصف الرابع</h2>
+      <div class="boxs" style="display: grid">
+        ${fiveExam_final.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
                 <div class="text">${e.name}</div>
                 <a
                   target="_blank"
