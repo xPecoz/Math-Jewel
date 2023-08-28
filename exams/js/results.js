@@ -1,9 +1,38 @@
 let users = {
+  4000009: {
+    name: "ا",
+    weeks: {
+      0: 16,
+      1: 16,
+    },
+    months: {
+      September: 16,
+      October: 14,
+      November: 2,
+      December: 20,
+      February: 9,
+      March: 0,
+      April: 18,
+      May: 12,
+    },
+    final: {
+      0: 13,
+      1: 12,
+      2: 0,
+      3: 17,
+      4: 7,
+      5: 19,
+      6: 16,
+      7: 2,
+      8: 19,
+      9: 3,
+    },
+  },
   4006180: {
     name: "و",
     weeks: {
       0: 12,
-      1: 5,
+      1: 12,
     },
     months: {
       September: 9,
@@ -1215,35 +1244,6 @@ let users = {
       7: 8,
       8: 18,
       9: 16,
-    },
-  },
-  4498579: {
-    name: "ا",
-    weeks: {
-      0: 16,
-      1: 16,
-    },
-    months: {
-      September: 16,
-      October: 14,
-      November: 2,
-      December: 20,
-      February: 9,
-      March: 0,
-      April: 18,
-      May: 12,
-    },
-    final: {
-      0: 13,
-      1: 12,
-      2: 0,
-      3: 17,
-      4: 7,
-      5: 19,
-      6: 16,
-      7: 2,
-      8: 19,
-      9: 3,
     },
   },
   4499084: {
