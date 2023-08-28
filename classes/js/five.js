@@ -78,6 +78,20 @@ const fiveExamDrive_month = [
     href: "#",
   },
 ];
+const fiveLearnPDF = [
+  {
+    name: "B1",
+    href: "https://drive.google.com/file/d/1dEQMlNi3MM39woonneFClplUmc9y8xkH/view?usp=sharing",
+  },
+  {
+    name: "B2",
+    href: "https://drive.google.com/file/d/1NOgrtABbQ1s_f2SPnEfXCLB3IAeelmnS/view",
+  },
+  {
+    name: "B3",
+    href: "https://drive.google.com/file/d/1qeRmtCG1CxOg_sxCLhA7YwHa2a1sz6nt/view",
+  },
+];
 
 if (
   location.search &&
@@ -332,6 +346,33 @@ if (location.search == "?train") {
       <h2>إختبارات إلكترونية نهائية للخامس</h2>
       <div class="boxs" style="display: grid">
         ${fiveExam_final.map((e) => {
+          return `
+            <div class="box classBox">
+              <div class="emty" style="padding: 10px">
+                <div class="text">${e.name}</div>
+                <a
+                  target="_blank"
+                  href="${e.href}"
+                  class="coolBeans"
+                >
+                  الذهاب
+                </a>
+              </div>
+            </div>`;
+        })}
+      </div>
+    `.replaceAll(
+    `,
+            `,
+    ""
+  );
+} else if (location.search == "?learnPDF") {
+  document.querySelector(".main-page .container").innerHTML = `
+      <h1 class="h1-book">ملحقات الخامس</h1>
+      <p class="dec">ملحقات الصف الخامس</p>
+      <h2>ملحقات دروس الصف الخامس</h2>
+      <div class="boxs" style="display: grid">
+        ${fiveLearnPDF.map((e) => {
           return `
             <div class="box classBox">
               <div class="emty" style="padding: 10px">
