@@ -25,6 +25,10 @@ const fourTrain = [
     name: "A3",
     href: "https://drive.google.com/file/d/1e1t8LSi1s5YyOI5wZPEjEZEVYmlV8gMU/view",
   },
+  {
+    name: "A4",
+    href: "https://drive.google.com/file/d/1DM5cO7Y2YNqq17vElIK2e4KnCZge8eXq/view",
+  },
 ];
 const fourExam = [
   {
@@ -38,6 +42,10 @@ const fourExam = [
   {
     name: "A3",
     href: "https://drive.google.com/file/d/1-08V8Qbs5CMLRSoUUqxxi7ah5t1gkW5A/view",
+  },
+  {
+    name: "A4",
+    href: "https://drive.google.com/file/d/1VwYuXGAktwQ1ndQTZguavuGYY78Zxq4R/view",
   },
 ];
 const fourExam_month = [
@@ -65,6 +73,10 @@ const fourExamDrive = [
     name: "A3",
     href: "https://docs.google.com/forms/d/1HuoeypEq2pagB5mA-niydOhdM_1TLpssHcgig9pm1yM/viewform?edit_requested=true",
   },
+  {
+    name: "A4",
+    href: "https://docs.google.com/forms/d/1Ponxlkg_3kmwm8l1BLNye-SDR_pSd38xwlCujRy-9qc/viewform?edit_requested=true",
+  },
 ];
 const fourExamDrive_final = [
   {
@@ -90,6 +102,10 @@ const fourLearnPDF = [
   {
     name: "A3",
     href: "https://drive.google.com/file/d/1a4l6uJumxhWd0qYSzZM0oKQ2dxYH6DFN/view",
+  },
+  {
+    name: "A4",
+    href: "https://drive.google.com/file/d/1elxGNgtNKx3lrPbaUZTOU0rdW1KgiUO8/view",
   },
 ];
 
