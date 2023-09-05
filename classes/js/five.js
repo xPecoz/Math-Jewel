@@ -29,6 +29,10 @@ const fiveTrain = [
     name: "B4",
     href: "https://drive.google.com/file/d/1SS4_XDapoxS7PDfssOrU4r1kVccE1mEM/view",
   },
+  {
+    name: "B5",
+    href: "https://drive.google.com/file/d/1FF3a6lx5rAWb9of7oneaqFPUQUOzb-Jl/view",
+  },
 ];
 const fiveExam = [
   {
@@ -46,6 +50,10 @@ const fiveExam = [
   {
     name: "B4",
     href: "https://drive.google.com/file/d/1hxsgMngB36y2To28nkxWAi1arCANHVXL/view",
+  },
+  {
+    name: "B5",
+    href: "https://drive.google.com/file/d/1VdiJ6-2Y0T5g6qKdeXhLvk6W8vDHIbSp/view",
   },
 ];
 const fiveExam_month = [
@@ -77,6 +85,10 @@ const fiveExamDrive = [
     name: "B4",
     href: "https://docs.google.com/forms/d/1h2zcKEz1cy0QiR6tVLy7PKDuZ5AxTAoksIV_rI1BTY8/viewform?edit_requested=true",
   },
+  {
+    name: "B5",
+    href: "https://docs.google.com/forms/d/1V_iqlWF8CjI1KftNRueLcvn8ijG3Dnbeo987VdI8T0o/viewform?edit_requested=true",
+  },
 ];
 const fiveExamDrive_final = [
   {
@@ -106,6 +118,10 @@ const fiveLearnPDF = [
   {
     name: "B4",
     href: "https://drive.google.com/file/d/1xtkojnBLWUhd3MR9-n5Dbq4TN3gH7pRQ/view",
+  },
+  {
+    name: "B5",
+    href: "https://drive.google.com/file/d/1aEBppsNN83nlV4jXefosfzvwXy-6X7VF/view",
   },
 ];
 
